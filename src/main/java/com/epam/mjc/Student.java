@@ -20,6 +20,21 @@ public enum Student {
   private String name;
   private int age;
 
+
+  public static class StudentNotFoundException extends IllegalArgumentException {
+    public StudentNotFoundException(String message) {
+      super(message);
+    }
+
+    public StudentNotFoundException(String message, Throwable cause) {
+      super(message, cause);
+    }
+
+    public StudentNotFoundException(Throwable cause) {
+      super(cause);
+    }
+  }
+
   Student(long id, String name, int age) {
     this.id = id;
     this.name = name;
