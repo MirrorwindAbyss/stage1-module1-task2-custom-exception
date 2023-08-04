@@ -7,7 +7,7 @@ public class StudentManager {
 
   public Student find(long studentID){
     if (Student.getValueOf(studentID)==null){
-      throw new Student.StudentNotFoundException("Could not find student with id "+ studentID);
+      throw new Student.StudentNotFoundException("Could not find student with ID "+ studentID);
     }
       return Student.getValueOf(studentID);
   }
